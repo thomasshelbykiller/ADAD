@@ -1,0 +1,18 @@
+db.person.insertMany([
+  {"name": "Ram", "country": "Egypt"},
+  {"name": "Karan", "country": "France"},
+  {"name": "Arjun", "country": "France"},
+  {"name": "Athens", "country": "Greece"},
+  {"name": "Rahul", "country": "China"},
+  {"name": "Ben", "country": "USA"}
+])
+db.person.find()
+db.person.updateOne(
+  { "name": "Arjun" },
+  {
+    $set: { "name": "Arun" }
+  }
+)
+db.person.deleteOne(
+    { "name": "Arun" }
+)
